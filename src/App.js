@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import './App.css';
+import { fetchCar } from './features/car/carSlice';
 import { fetchUser } from './features/user/userSlice';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
   React.useEffect(() => {
     dispatch(fetchUser());
+    dispatch(fetchCar());
   }, []);
 
   return (
