@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import './App.css';
 import { fetchCar } from './features/car/carSlice';
 import { fetchUser } from './features/user/userSlice';
+import { fetchReservatins } from './features/reservations/reservationSlice';
 
 function App() {
   const dispatch = useDispatch();
@@ -11,7 +12,8 @@ function App() {
   React.useEffect(() => {
     dispatch(fetchUser());
     dispatch(fetchCar());
-  }, []);
+    dispatch(fetchReservatins());
+  }, [dispatch]);
 
   return (
     <div className="App">
