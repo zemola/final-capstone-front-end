@@ -20,7 +20,7 @@ root.render(
         <Routes>
           <Route element={<App />}>
             <Route element={<HomePage />} index />
-            <Route element={<SingleCarPage />} path="/car/:id" />
+            <Route element={<SingleCarPage />} path="cars/:id" />
             <Route element={<Shop />} path="/shop" />
           </Route>
         </Routes>

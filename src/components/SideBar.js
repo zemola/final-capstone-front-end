@@ -13,7 +13,6 @@ export default function SideBar() {
         <ul className={styles.navList}>
           <li className={styles.navItem}>
             <NavLink
-              exact
               to="/"
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
             >
