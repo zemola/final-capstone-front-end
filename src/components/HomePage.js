@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CarCard from './CarCard';
 import styles from './HomePage.module.css';
 
@@ -10,12 +11,13 @@ const HomePage = () => {
     let carsList;
     if (cars.length > 0) {
       carsList = cars.map((item) => (
-        <CarCard
-          price={item.price}
-          key={item.id}
-          brand={item.brand}
-          model={item.model}
-        />
+        <Link className={styles.carLink} to={`cars/${item.id}`} key={item.id}>
+          <CarCard
+            price={item.price}
+            brand={item.brand}
+            model={item.model}
+          />
+        </Link>
       ));
     } else {
       carsList = <h1 className={styles.noCars}>There are no cars yet</h1>;

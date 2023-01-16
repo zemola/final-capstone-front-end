@@ -16,6 +16,11 @@
   flex: 2;
 }
 
+.carLink {
+  text-decoration: none;
+  color: black;
+}
+
 .mainHeading {
   text-transform: uppercase;
 }

@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import HomePage from './components/HomePage';
 import Shop from './components/Shop';
+import SingleCarPage from './components/SingleCarPage';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -19,6 +20,7 @@ root.render(
         <Routes>
           <Route element={<App />}>
             <Route element={<HomePage />} index />
+            <Route element={<SingleCarPage />} path="/car/:id" />
             <Route element={<Shop />} path="/shop" />
           </Route>
         </Routes>
