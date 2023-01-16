@@ -6,6 +6,7 @@
   width: 100%;
   gap: 20px;
   flex: 8;
+  padding: 20px;
 }
 
 .carImageContainer {
@@ -24,6 +25,63 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex: 0.5;
+  width: 100%;
+  padding-left: 20px;
+  height: 80vh;
+}
+
+.carNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.infoChart {
+  list-style: none;
+  width: 100%;
+}
+
+.infoChartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #96C01F;
+  border: none;
+  box-shadow: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 10px;
+  width: 120px;
+  border-radius: 20px;
+  box-shadow: 2px 3px 3px #eee;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 5px 5px #999;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 1px #eee;
 }
