@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './SingleCarPage.module.css';
 import carImage from '../img/car.png';
+import { fetchSingleCar } from '../features/singleCar/singleCarSlice';
 
 export default function SingleCarPage() {
   const location = useLocation();
   const id = location.state;
-  console.log(id);
+  const dispatch = useDispatch();
+  const { car } = useSelector((state) => state.singleCar);
+  console.log(car);
+
+  useEffect(() => {
+    dispatch(fetchSingleCar(id));
+  }, [id]);
+
   return (
     <div className={styles.container}>
       <div className={styles.carImageContainer}>
@@ -15,8 +24,12 @@ export default function SingleCarPage() {
       </div>
       <div className={styles.carDetails}>
         <div className={styles.carNameContainer}>
-          <h3>Car Name</h3>
-          <p>Car Info</p>
+          <h3>
+            {car.brand}
+          </h3>
+          <p>
+            {car.model}
+          </p>
         </div>
         <ul className={styles.infoChart}>
           <li style={{ backgroundColor: '#e2e3e5' }} className={styles.infoChartItem}>
@@ -24,31 +37,32 @@ export default function SingleCarPage() {
               Price
             </p>
             <p className={styles.infoChartText}>
-              $ 1200
+              $
+              { car.price }
             </p>
           </li>
           <li className={styles.infoChartItem}>
             <p className={styles.infoChartText}>
-              Price
+              Year
             </p>
             <p className={styles.infoChartText}>
-              $ 1200
+              {car.release_year}
             </p>
           </li>
           <li style={{ backgroundColor: '#e2e3e5' }} className={styles.infoChartItem}>
             <p className={styles.infoChartText}>
-              Price
+              Seats
             </p>
             <p className={styles.infoChartText}>
-              $ 1200
+              {car.seats}
             </p>
           </li>
           <li className={styles.infoChartItem}>
             <p className={styles.infoChartText}>
-              Price
+              Wheels
             </p>
             <p className={styles.infoChartText}>
-              $ 1200
+              {car.wheel_drive}
             </p>
           </li>
         </ul>
