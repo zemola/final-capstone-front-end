@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  height: 100vh;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+  width: 100%;
+  height: 40px;
+}
+
+.navLink {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: green;
+  color: white;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.navLinkTwo {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  width: 100%;
+  padding: 5px 10px;
+}

@@ -6,6 +6,8 @@ import store from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import HomePage from './components/HomePage';
+import Shop from './components/Shop';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -15,7 +17,10 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route element={<App />} path="/" />
+          <Route element={<App />}>
+            <Route element={<HomePage />} index />
+            <Route element={<Shop />} path="/shop" />
+          </Route>
         </Routes>
       </BrowserRouter>
     </Provider>

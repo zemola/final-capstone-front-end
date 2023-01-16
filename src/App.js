@@ -5,6 +5,7 @@ import './App.css';
 import { fetchCar } from './features/car/carSlice';
 import { fetchUser } from './features/user/userSlice';
 import { fetchReservatins } from './features/reservations/reservationSlice';
+import SideBar from './components/SideBar';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,9 +18,8 @@ function App() {
 
   return (
     <div className="App">
-      <header>Hello React Capstone</header>
+      <SideBar />
       <Outlet />
-      <footer>Now here goes our footer</footer>
     </div>
   );
 }
