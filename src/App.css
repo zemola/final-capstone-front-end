@@ -16,6 +16,14 @@
   background-color: black;
 }
 
+.link {
+  font-size: 10px;
+  padding: 5px;
+  background-color: #eee;
+  border: solid 1px #999;
+  border-radius: 50px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
