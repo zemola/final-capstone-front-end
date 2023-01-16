@@ -9,7 +9,14 @@ const HomePage = () => {
   const showCars = () => {
     let carsList;
     if (cars.length > 0) {
-      carsList = cars.map((item) => <CarCard id={item.id} key={item.id} />);
+      carsList = cars.map((item) => (
+        <CarCard
+          price={item.price}
+          key={item.id}
+          brand={item.brand}
+          model={item.model}
+        />
+      ));
     } else {
       carsList = <h1 className={styles.noCars}>There are no cars yet</h1>;
     }
