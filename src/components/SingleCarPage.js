@@ -11,11 +11,9 @@ export default function SingleCarPage() {
   const id = location.state;
   const dispatch = useDispatch();
   const { car } = useSelector((state) => state.singleCar);
-  console.log(car);
-
   useEffect(() => {
     dispatch(fetchSingleCar(id));
-  }, [id]);
+  }, [dispatch, id]);
 
   return (
     <div className={styles.container}>

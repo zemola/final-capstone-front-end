@@ -43,7 +43,6 @@
 
 .navLink {
   font-weight: bold;
-  color: black;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #96c01f;
@@ -54,7 +53,6 @@
 
 .navLinkTwo {
   font-weight: bold;
-  color: black;
   text-decoration: none;
   text-transform: uppercase;
   background-color: white;
