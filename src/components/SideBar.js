@@ -1,11 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './SideBar.module.css';
+import logo from '../img/logo.png';
 
 export default function SideBar() {
   return (
     <div className={styles.container}>
-      <a href="/">Logo</a>
+      <NavLink href="/">
+        <img className={styles.logo} src={logo} alt="logo" />
+      </NavLink>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
           <NavLink
@@ -45,6 +48,7 @@ export default function SideBar() {
 
       <div className="socialLinks">
         <p>socialLinks</p>
+        <i className="fa-brands fa-facebook" />
       </div>
     </div>
   );
