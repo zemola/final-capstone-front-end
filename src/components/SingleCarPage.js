@@ -5,7 +5,9 @@ import carImage from '../img/car.png';
 export default function SingleCarPage() {
   return (
     <div className={styles.container}>
-      <img className={styles.carImage} src={carImage} alt="carImage" />
+      <div className={styles.carImageContainer}>
+        <img className={styles.carImage} src={carImage} alt="carImage" />
+      </div>
       <div className={styles.carDetails}>
         <div className={styles.carNameContainer}>
           <h3>Car Name</h3>
@@ -46,7 +48,6 @@ export default function SingleCarPage() {
           </li>
         </ul>
       </div>
-      SingleCarPage
     </div>
   );
 }
