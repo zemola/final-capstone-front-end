@@ -41,7 +41,15 @@ const HomePage = () => {
       </div>
 
       <div className={styles.modelsContainer}>
-        { showCars() }
+        <button type="button" onClick={() => console.log('Prev')} className={styles.pagBtn}>
+          <i className="fa-brands fa-chevron-left" />
+        </button>
+        <div className={styles.carsContainer}>
+          { showCars() }
+        </div>
+        <button type="button" onClick={() => console.log('Next')} className={styles.pagBtn}>
+          <i className="fa-brands fa-chevron-right" />
+        </button>
       </div>
     </div>
   );

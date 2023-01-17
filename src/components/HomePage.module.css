@@ -32,7 +32,14 @@
 .modelsContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex: 4;
   gap: 20px;
+  width: 80%;
+}
+
+.carsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
