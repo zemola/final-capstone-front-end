@@ -65,11 +65,8 @@ export default function SingleCarPage() {
           </li>
         </ul>
         <div className={styles.btnContainer}>
-          <button type="button" onClick={() => console.log('Edit')} className={styles.btn}>
-            Edit
-          </button>
-          <button type="button" onClick={() => console.log('Delete')} className={styles.btn}>
-            Delete
+          <button type="button" onClick={() => console.log('Reserve')} className={styles.btn}>
+            Reserve
           </button>
         </div>
       </div>
