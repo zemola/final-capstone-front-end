@@ -35,7 +35,58 @@
   justify-content: space-between;
   flex: 4;
   gap: 20px;
-  width: 80%;
+  width: 95%;
+}
+
+.pageBtnPrev {
+  height: 50px;
+  width: 80px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #96c01f;
+  border: none;
+  outline: none;
+  box-shadow: 2px 3px 3px #eee;
+  transition: all 0.3s;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: white;
+}
+
+.pageBtnNext {
+  height: 50px;
+  width: 80px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #96c01f;
+  border: none;
+  outline: none;
+  box-shadow: 2px 3px 3px #eee;
+  transition: all 0.3s;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  color: white;
+}
+
+.pageBtnPrev:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 5px 5px #999;
+}
+
+.pageBtnNext:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 5px 5px #999;
+}
+
+
+.pageBtnPrev:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 1px #eee;
+}
+
+.pageBtnNext:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 1px #eee;
 }
 
 .carsContainer {
