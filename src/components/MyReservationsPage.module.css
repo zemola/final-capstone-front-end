@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex: 8;
+  height: 90vh;
+}
+
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.tableHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  border: solid 1px #999;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #96c01f;
+  color: white;
+  box-shadow: 1px 1px 1px rgb(63, 59, 59);
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  border: solid 1px #999;
+  padding: 10px;
+  box-shadow: 1px 1px 1px rgb(63, 59, 59);
+}
+
+.deleteBtn {
+  background-color: #96c01f;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: none;
+  transition: all 0.3s;
+}
+
+.deleteBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 2px 3px rgba(153, 153, 153, 0.644);
+}
+
+.deleteBtn:active {
+  transform: translateY(0);
+  box-shadow: 1px 1px 1px rgba(153, 153, 153, 0.644);
+}
