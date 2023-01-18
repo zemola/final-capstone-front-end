@@ -29,6 +29,10 @@
   color: #999;
 }
 
+.noCars {
+  text-align: center;
+}
+
 .modelsContainer {
   display: flex;
   align-items: center;
@@ -140,4 +144,26 @@
     flex-direction: column;
     gap: 50px;
   }
+
+  .pageBtnNext {
+    align-self: flex-end;
+  }
+
+  .pageBtnPrev {
+    align-self: flex-end;
+  }
+
+  .pageBtnDisabledNext {
+    align-self: flex-end;
+  }
+
+  .pageBtnDisabledPrev {
+    height: 5vw;
+    align-self: flex-end;
+  }
+
+  .noCars {
+    font-size: 16px;
+  }
+
   }
