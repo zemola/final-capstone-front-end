@@ -39,8 +39,8 @@
 }
 
 .pageBtnPrev {
-  height: 50px;
-  width: 80px;
+  height: 5vw;
+  width: 8vw;
   font-size: 22px;
   font-weight: bold;
   background-color: #96c01f;
@@ -54,8 +54,8 @@
 }
 
 .pageBtnNext {
-  height: 50px;
-  width: 80px;
+  height: 5vw;
+  width: 8vw;
   font-size: 22px;
   font-weight: bold;
   background-color: #96c01f;
@@ -69,8 +69,8 @@
 }
 
 .pageBtnDisabledNext {
-  height: 50px;
-  width: 80px;
+  height: 5vw;
+  width: 8vw;
   font-size: 22px;
   font-weight: bold;
   background-color: #999;
@@ -84,8 +84,8 @@
 }
 
 .pageBtnDisabledPrev {
-  height: 50px;
-  width: 80px;
+  height: 5vw;
+  width: 8vw;
   font-size: 22px;
   font-weight: bold;
   background-color: #999;
@@ -93,8 +93,8 @@
   outline: none;
   box-shadow: 2px 3px 3px #eee;
   transition: all 0.3s;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   color: white;
 }
 
@@ -123,4 +123,20 @@
   align-items: center;
   justify-content: center;
   gap: 10%;
+  flex: 6;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 100%;
+  }
+
+  .header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .carsContainer {
+    flex-direction: column;
+  }
+  }
