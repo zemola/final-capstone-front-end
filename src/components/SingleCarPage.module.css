@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  flex: 2;
+  flex: 4;
   height: 100vh;
 }
 
@@ -25,6 +25,9 @@
 }
 
 .pageBtnPrev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 5vw;
   width: 8vw;
   font-size: 22px;
@@ -105,4 +108,38 @@
 .btn:active {
   transform: translateY(1px);
   box-shadow: 1px 1px 1px #eee;
+}
+
+@media only screen and (max-width: 1080px) {
+  .carDetails {
+    flex: 1.5;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .infoChartItem {
+    font-size: 14px;
+  }
+  .carDetails {
+    flex: 2;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .pageBtnPrev {
+    position: absolute;
+    top: 80vh;
+    left: 20vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .carImage {
+    height: 50vw;
+    width: 60vw;
+  }
 }
