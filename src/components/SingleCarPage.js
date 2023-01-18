@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './SingleCarPage.module.css';
@@ -19,6 +19,11 @@ export default function SingleCarPage() {
     <div className={styles.container}>
       <div className={styles.carImageContainer}>
         <img className={styles.carImage} src={carImage} alt="carImage" />
+        <Link to="/" className={styles.pageBtnPrev}>
+          <p>
+            {'<'}
+          </p>
+        </Link>
       </div>
       <div className={styles.carDetails}>
         <div className={styles.carNameContainer}>

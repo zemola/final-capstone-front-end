@@ -10,6 +10,41 @@ export default function SideBar() {
         <NavLink href="/">
           <img className={styles.logo} src={logo} alt="logo" />
         </NavLink>
+        <ul className={styles.iconMenu}>
+          <li className={styles.navItem}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
+            >
+              <i className="fa-solid fa-car-side" />
+            </NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
+              to="/lifestyle"
+            >
+              <i className="fa-solid fa-car-side" />
+            </NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
+              exact
+              to="/shop"
+            >
+              <i className="fa-solid fa-car-side" />
+            </NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
+              to="/drive"
+            >
+              <i className="fa-solid fa-car-side" />
+            </NavLink>
+          </li>
+        </ul>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
             <NavLink
