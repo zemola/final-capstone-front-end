@@ -1,19 +1,27 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteCar, fetchCars } from '../features/car/carSlice';
 
 import styles from './CarDeletePage.module.css';
 
 export default function CarDeletePage() {
-  const { cars } = useSelector((state) => state.cars);
+  const dispatch = useDispatch();
+  const { allCars } = useSelector((state) => state.cars);
+  console.log(allCars);
+
+  React.useEffect(() => {
+    dispatch(fetchCars());
+  }, []);
+
   let list = null;
-  if (cars.length > 1) {
-    list = cars.map((car) => (
+  if (allCars.length > 0) {
+    list = allCars.map((car) => (
       <tr key={car.id} className={styles.tableRow}>
         <td className={styles.tableData}>
           {car.brand}
         </td>
         <td>
-          <button type="button" className={styles.deleteBtn} aria-label="delete button" onClick={() => console.log('delete')}>
+          <button type="button" className={styles.deleteBtn} aria-label="delete button" onClick={() => dispatch(deleteCar(car.id))}>
             Delete
           </button>
         </td>
