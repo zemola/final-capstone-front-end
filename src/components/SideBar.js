@@ -24,7 +24,7 @@ export default function SideBar() {
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
               to="/reservations"
             >
-              <i className="fa-solid fa-car-side" />
+              <i className="fa-solid fa-chart-simple" />
             </NavLink>
           </li>
           <li className={styles.navItem}>
@@ -41,7 +41,7 @@ export default function SideBar() {
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
               to="/delete"
             >
-              <i className="fa-solid fa-car-side" />
+              <i className="fa-solid fa-trash" />
             </NavLink>
           </li>
         </ul>
