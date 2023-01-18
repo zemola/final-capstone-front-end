@@ -7,11 +7,9 @@ import styles from './CarDeletePage.module.css';
 export default function CarDeletePage() {
   const dispatch = useDispatch();
   const { allCars } = useSelector((state) => state.cars);
-  console.log(allCars);
-
   React.useEffect(() => {
     dispatch(fetchCars());
-  }, []);
+  }, [dispatch]);
 
   let list = null;
   if (allCars.length > 0) {
@@ -31,6 +29,7 @@ export default function CarDeletePage() {
 
   return (
     <div className={styles.container}>
+      <h1>Which car do you want to delete?</h1>
       <table className={styles.table}>
         <th className={styles.tableHeading}>
           <td>Car Name</td>
