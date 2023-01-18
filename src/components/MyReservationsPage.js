@@ -5,19 +5,19 @@ import styles from './MyReservationsPage.module.css';
 
 export default function MyReservationsPage() {
   const { reservations } = useSelector((state) => state.reservations);
-
   let list = null;
   if (reservations.length > 0) {
-    list = reservations.map((resv) => (
-      <tr key={resv.id} className={styles.tableRow}>
+    list = reservations.map((item) => (
+
+      <tr key={item.id} className={styles.tableRow}>
         <td className={styles.tableData}>
-          {resv.car.brand}
+          {item.id}
         </td>
         <td className={styles.tableData}>
-          {resv.car.reservation_from}
+          {item.reserved_from}
         </td>
         <td className={styles.tableData}>
-          {resv.car.reservation_until}
+          {item.reserved_until}
         </td>
       </tr>
     ));
@@ -25,13 +25,12 @@ export default function MyReservationsPage() {
 
   return (
     <div className={styles.container}>
-      <h1>Which car do you want to delete?</h1>
+      <h1>All your Reserations</h1>
       <table className={styles.table}>
         <th className={styles.tableHeading}>
-          <td>Car Name</td>
+          <td>Car ID</td>
           <td>Reserved From</td>
           <td>Reserved Until</td>
-          <td>Delete</td>
         </th>
         {list}
       </table>
