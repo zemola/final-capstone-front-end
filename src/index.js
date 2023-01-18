@@ -9,6 +9,7 @@ import './index.css';
 import HomePage from './components/HomePage';
 import Shop from './components/Shop';
 import SingleCarPage from './components/SingleCarPage';
+import CarDeletePage from './components/CarDeletePage';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -22,6 +23,7 @@ root.render(
             <Route element={<HomePage />} index />
             <Route element={<SingleCarPage />} path="cars/:id" />
             <Route element={<Shop />} path="/shop" />
+            <Route element={<CarDeletePage />} path="/delete" />
           </Route>
         </Routes>
       </BrowserRouter>

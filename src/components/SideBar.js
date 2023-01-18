@@ -39,7 +39,7 @@ export default function SideBar() {
           <li className={styles.navItem}>
             <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
-              to="/drive"
+              to="/delete"
             >
               <i className="fa-solid fa-car-side" />
             </NavLink>
@@ -74,9 +74,9 @@ export default function SideBar() {
           <li className={styles.navItem}>
             <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
-              to="/drive"
+              to="/delete"
             >
-              Test Drive
+              Delete
             </NavLink>
           </li>
         </ul>
