@@ -114,4 +114,17 @@
     width: 20vw;
     height: 20vw;
   }
+
+  .socialLinksContainer {
+    gap: 5px;
+  }
+
+  .socialLinks {
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .copyRight {
+    font-size: 10px;
+  }
   }
