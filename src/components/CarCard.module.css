@@ -42,3 +42,18 @@
   justify-content: center;
   gap: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .carImg {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 1000px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+  .dots {
+    align-self: flex-start;
+  }
+  }

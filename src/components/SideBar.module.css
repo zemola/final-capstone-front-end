@@ -83,12 +83,13 @@
 
 @media only screen and (max-width: 600px) {
 .container {
-  display: none;
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  flex: 2;
+  flex: 3;
   height: 100vh;
+  margin-top: -100px;
 }
 }

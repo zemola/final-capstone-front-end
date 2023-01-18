@@ -12,11 +12,11 @@ export default function CarCard({ price, brand, model }) {
         <p className={styles.dots}>.......................</p>
         <p className={styles.detailsInfo}>{`Brand: ${brand}`}</p>
         <p className={styles.detailsInfo}>{`Price: ${price}`}</p>
-      </div>
-      <div className={styles.socialLinks}>
-        <i className="fa-brands fa-facebook link" />
-        <i className="fa-brands fa-twitter link" />
-        <i className="fa-brands fa-google link" />
+        <div className={styles.socialLinks}>
+          <i className="fa-brands fa-facebook link" />
+          <i className="fa-brands fa-twitter link" />
+          <i className="fa-brands fa-google link" />
+        </div>
       </div>
     </div>
   );
