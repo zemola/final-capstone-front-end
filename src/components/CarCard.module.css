@@ -53,7 +53,8 @@
   .container {
     flex-direction: row;
   }
+
   .dots {
     align-self: flex-start;
   }
-  }
+}

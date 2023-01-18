@@ -42,7 +42,6 @@
   color: white;
   text-decoration: none;
   text-align: center;
-  text-justify: distribute;
   align-self: flex-start;
 }
 
@@ -120,6 +119,7 @@
   .infoChartItem {
     font-size: 14px;
   }
+
   .carDetails {
     flex: 2;
   }

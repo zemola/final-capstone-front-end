@@ -88,11 +88,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-
-.container {
-  flex: 3;
-}
-
+  .container {
+    flex: 3;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -127,4 +125,4 @@
   .copyRight {
     font-size: 10px;
   }
-  }
+}
