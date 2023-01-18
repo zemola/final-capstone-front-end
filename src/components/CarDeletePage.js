@@ -13,7 +13,7 @@ export default function CarDeletePage() {
           {car.brand}
         </td>
         <td>
-          <button type="button" aria-label="delete button" onClick={() => console.log('delete')}>
+          <button type="button" className={styles.deleteBtn} aria-label="delete button" onClick={() => console.log('delete')}>
             Delete
           </button>
         </td>
