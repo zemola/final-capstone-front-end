@@ -148,3 +148,10 @@ Feel free to check the [issues page](https://github.com/zemola/final-capstone-fr
 If you like this project, leave a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> This project was built and developed around the UI idea of ![Murat Korkmaz](https://www.behance.net/muratk) on ![Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
