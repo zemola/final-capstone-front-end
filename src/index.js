@@ -10,6 +10,7 @@ import HomePage from './components/HomePage';
 import Shop from './components/Shop';
 import CarDeletePage from './components/CarDeletePage';
 import MyReservationsPage from './components/MyReservationsPage';
+import SingleCarPage from './components/SingleCarPage';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -21,6 +22,7 @@ root.render(
         <Routes>
           <Route element={<App />}>
             <Route element={<HomePage />} index />
+            <Route element={<SingleCarPage />} path="cars/:id" />
             <Route element={<MyReservationsPage />} path="reservations" />
             <Route element={<Shop />} path="/shop" />
             <Route element={<CarDeletePage />} path="/delete" />
