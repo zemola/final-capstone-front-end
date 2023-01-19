@@ -118,3 +118,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - GitHub: [@githubhandle](https://github.com/aceDavon)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/david-makoji-b6090971/)
 - LinkedIn: [LinkedIn](https://twitter.com/sharkleshevon)
+
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[full_authentication]**
+- [ ] **[authorization]**
