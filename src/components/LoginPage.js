@@ -31,8 +31,8 @@ export default function LoginPage() {
       <img src={logoImage} className={styles.logoImg} alt="app logo" />
       <h1 className={styles.heading}>Wellcome to Our Page</h1>
       <div className={styles.inputesContainer}>
-        <input className={styles.input} type="text" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="Enter your username" />
-        <input className={styles.input} type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
+        <input required className={styles.input} type="text" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="Enter your username" />
+        <input required className={styles.input} type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />
         <button className={styles.button} type="button" onClick={() => login(email)}>
           Login
         </button>

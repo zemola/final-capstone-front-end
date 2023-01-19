@@ -9,7 +9,7 @@ export default function CarDeletePage() {
   const { allCars } = useSelector((state) => state.cars);
   React.useEffect(() => {
     dispatch(fetchCars());
-  }, [dispatch]);
+  }, [dispatch, allCars]);
 
   let list = null;
   if (allCars.length > 0) {
@@ -31,11 +31,15 @@ export default function CarDeletePage() {
     <div className={styles.container}>
       <h1>Which car do you want to delete?</h1>
       <table className={styles.table}>
-        <th className={styles.tableHeading}>
-          <td>Car Name</td>
-          <td>Delete</td>
-        </th>
-        {list}
+        <thead className={styles.tableHeading}>
+          <tr className={styles.tableHeader}>
+            <th>Car Name</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody className={styles.tableBody}>
+          {list}
+        </tbody>
       </table>
     </div>
   );

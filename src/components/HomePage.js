@@ -13,6 +13,7 @@ const HomePage = () => {
   const [prevDisabled, setPrevDisabled] = useState(true);
   // eslint-disable-next-line no-unused-vars
   const [nextDisabled, setNextDisabled] = useState(false);
+
   const dispatch = useDispatch();
 
   const showCars = () => {
