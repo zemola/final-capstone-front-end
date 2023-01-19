@@ -32,6 +32,13 @@
 
 **[RentoCars]** is an application in which users can reserve cars  for their events for a given period of time.
 
+## 🛠 Built With <a name="built-with"></a>
+- Ruby on Rails
+- Postgresql
+- ReactJS
+- Redux
+- Webpack
+- Babel
 
 
 # Getting Started with Create React App and Redux
