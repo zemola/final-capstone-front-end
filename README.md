@@ -95,4 +95,11 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
+## 👥 Authors <a name="authors"></a>
+
+👤 **Author1**
+
+- GitHub: [@githubhandle](https://github.com/zemola)
+- Twitter: [@twitterhandle](https://twitter.com/zemolat)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/olatunjiazeem/)
 
