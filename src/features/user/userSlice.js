@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   users: [],
+  currentUser: null,
   status: 'idle',
 };
 
@@ -11,6 +12,14 @@ export const fetchUser = createAsyncThunk('user/fetch', async () => {
 
     const res = await data.json();
     return res.data;
+  } catch (error) {
+    return error.messages;
+  }
+});
+
+export const setCurrentUser = createAsyncThunk('set/currentUser', async (user) => {
+  try {
+    return user;
   } catch (error) {
     return error.messages;
   }
@@ -34,6 +43,10 @@ const UserSlice = createSlice({
       .addCase(fetchUser.rejected, (state) => ({
         ...state,
         status: 'rejected',
+      }))
+      .addCase(setCurrentUser.fulfilled, (state, action) => ({
+        ...state,
+        currentUser: action.payload,
       }));
   },
 });
