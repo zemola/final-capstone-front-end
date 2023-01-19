@@ -17,7 +17,6 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 
 const RoutFinder = () => {
-  // eslint-disable-next-line no-unused-vars
   const user = null;
 
   if (user) {
