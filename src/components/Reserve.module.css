@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 8;
+  gap: 50px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.labelText {
+  color: #96c01f;
+}
+
+.reserveBtn {
+  background-color: #96c01f;
+  padding: 5px 10px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.reserveBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 2px 2px #999;
+}
+
+.reserveBtn:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 1px #999;
+}

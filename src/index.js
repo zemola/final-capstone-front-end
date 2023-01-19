@@ -7,10 +7,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import HomePage from './components/HomePage';
-import Shop from './components/Shop';
 import CarDeletePage from './components/CarDeletePage';
 import MyReservationsPage from './components/MyReservationsPage';
 import SingleCarPage from './components/SingleCarPage';
+import Reserve from './components/Reserve';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -24,7 +24,7 @@ root.render(
             <Route element={<HomePage />} index />
             <Route element={<SingleCarPage />} path="cars/:id" />
             <Route element={<MyReservationsPage />} path="reservations" />
-            <Route element={<Shop />} path="/shop" />
+            <Route element={<Reserve />} path="/reserve" />
             <Route element={<CarDeletePage />} path="/delete" />
           </Route>
         </Routes>
