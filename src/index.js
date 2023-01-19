@@ -11,34 +11,22 @@ import Shop from './components/Shop';
 import CarDeletePage from './components/CarDeletePage';
 import MyReservationsPage from './components/MyReservationsPage';
 import SingleCarPage from './components/SingleCarPage';
-import LoginPage from './components/LoginPage';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-
-const RoutFinder = () => {
-  const user = null;
-
-  if (user) {
-    return (
-      <Route element={<App />}>
-        <Route element={<HomePage />} index />
-        <Route element={<SingleCarPage />} path="cars/:id" />
-        <Route element={<MyReservationsPage />} path="reservations" />
-        <Route element={<Shop />} path="/shop" />
-        <Route element={<CarDeletePage />} path="/delete" />
-      </Route>
-    );
-  }
-  return <Route element={<LoginPage />} path="/" />;
-};
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          {RoutFinder()}
+          <Route element={<App />}>
+            <Route element={<HomePage />} index />
+            <Route element={<SingleCarPage />} path="cars/:id" />
+            <Route element={<MyReservationsPage />} path="reservations" />
+            <Route element={<Shop />} path="/shop" />
+            <Route element={<CarDeletePage />} path="/delete" />
+          </Route>
         </Routes>
       </BrowserRouter>
     </Provider>

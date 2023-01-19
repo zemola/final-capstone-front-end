@@ -9,6 +9,7 @@ export default function LoginPage() {
   const [message, setMessage] = useState('');
   const { users } = useSelector((state) => state.users);
   console.log(users);
+
   const dispatch = useDispatch();
 
   React.useEffect(() => {
@@ -21,7 +22,7 @@ export default function LoginPage() {
       localStorage.setItem('currentUser', JSON.stringify(user[0]));
       dispatch(setCurrentUser(user[0]));
     } else {
-      setMessage(<p className={styles.errorMsg}>Your are not regestered in our system</p>);
+      setMessage(<p className={styles.errorMsg}>You are not regestered in our system</p>);
     }
   };
 
