@@ -38,9 +38,9 @@ export const fetchCars = createAsyncThunk('cars/fetch', async () => {
   }
 });
 
-export const deleteCar = createAsyncThunk('car/delete', async (id) => {
+export const deleteCar = createAsyncThunk('car/delete', async () => {
   try {
-    const data = await fetch(`http://localhost:3000/api/v1/users/1/cars/${id}`, { method: 'DELETE' });
+    const data = await fetch(`http://localhost:3000/api/v1/users/${id}/cars/${id}`, { method: 'DELETE' });
 
     const res = await data.json();
     if (res.error) {
