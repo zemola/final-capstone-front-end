@@ -31,7 +31,7 @@ export default function SideBar() {
             <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
               exact
-              to="/shop"
+              to="/reserve"
             >
               <i className="fa-solid fa-car-side" />
             </NavLink>
@@ -66,9 +66,9 @@ export default function SideBar() {
             <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
               exact
-              to="/shop"
+              to="/reserve"
             >
-              Shop
+              Reserve
             </NavLink>
           </li>
           <li className={styles.navItem}>
