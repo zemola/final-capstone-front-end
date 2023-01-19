@@ -142,3 +142,9 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/zemola/final-capstone-front-end/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, leave a star.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
