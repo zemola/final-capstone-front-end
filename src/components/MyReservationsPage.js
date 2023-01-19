@@ -27,12 +27,16 @@ export default function MyReservationsPage() {
     <div className={styles.container}>
       <h1>All your Reserations</h1>
       <table className={styles.table}>
-        <th className={styles.tableHeading}>
-          <td>Car ID</td>
-          <td>Reserved From</td>
-          <td>Reserved Until</td>
-        </th>
-        {list}
+        <thead className={styles.tableHeader}>
+          <tr className={styles.tableHeading}>
+            <th>Car ID</th>
+            <th>Reserved From</th>
+            <th>Reserved Until</th>
+          </tr>
+        </thead>
+        <tbody className={styles.tableBody}>
+          {list}
+        </tbody>
       </table>
     </div>
   );
