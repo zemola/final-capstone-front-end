@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { CreateReservation } from '../features/reservations/reservationSlice';
 import styles from './Reserve.module.css';
 
 const Reserve = () => {
@@ -13,6 +14,20 @@ const Reserve = () => {
   const [userRID, setUserRId] = useState('');
   const [reservedFrom, setReservedFrom] = useState('');
   const [reservedUntil, setReservedUntil] = useState('');
+
+  const dispatch = useDispatch();
+
+  const data = {
+    reserved_from: reservedFrom,
+    reserved_until: reservedUntil,
+    user_id: 1,
+    car_id: reservedCarId,
+  };
+
+  useEffect(() => {
+    const id = JSON.parse(localStorage.getItem('userId'));
+    setUserRId(id);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -39,6 +54,9 @@ const Reserve = () => {
           <p className={styles.labelText}>Ending Date:</p>
           <input id="endingDate" type="date" value={reservedUntil} onChange={(e) => setReservedUntil(e.target.value)} />
         </label>
+        <button className={styles.reserveBtn} type="button" onClick={() => dispatch(CreateReservation(data))}>
+          Reserve
+        </button>
       </div>
     </div>
   );
