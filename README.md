@@ -40,6 +40,12 @@
 - Webpack
 - Babel
 
+### Key Features <a name="key-features"></a>
+
+- **[Adding_cars_to_the_application]**
+- **[Deleting_cars_from_the_application]**
+- **[Reserving_cars]**
+
 
 # Getting Started with Create React App and Redux
 
