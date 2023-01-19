@@ -103,3 +103,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - Twitter: [@twitterhandle](https://twitter.com/zemolat)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/olatunjiazeem/)
 
+👤 **Author2**
+
+- GitHub: [@githubhandle](https://github.com/HabibPayenda)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/habibpayenda/)
+
+
