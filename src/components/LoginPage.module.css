@@ -30,3 +30,12 @@
   border: none;
   color: white;
 }
+
+.logoImg {
+  height: 10vh;
+  width: 10vh;
+}
+
+.heading {
+  text-align: center;
+}

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser, setCurrentUser } from '../features/user/userSlice';
 import styles from './LoginPage.module.css';
+import logoImage from '../img/logo.png';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [userName, setUserName] = useState('');
   const [message, setMessage] = useState('');
   const { users } = useSelector((state) => state.users);
-  console.log(users);
 
   const dispatch = useDispatch();
 
@@ -28,7 +28,8 @@ export default function LoginPage() {
 
   return (
     <div className={styles.container}>
-      <h1>Wellcome to Our Page</h1>
+      <img src={logoImage} className={styles.logoImg} alt="app logo" />
+      <h1 className={styles.heading}>Wellcome to Our Page</h1>
       <div className={styles.inputesContainer}>
         <input className={styles.input} type="text" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="Enter your username" />
         <input className={styles.input} type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" />

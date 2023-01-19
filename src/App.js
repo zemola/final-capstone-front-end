@@ -10,7 +10,6 @@ import LoginPage from './components/LoginPage';
 function App() {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.users);
-  console.log(currentUser);
 
   const isUser = () => {
     if (!currentUser) {
