@@ -43,9 +43,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Adding_cars_to_the_application]**
-- **[Deleting_cars_from_the_application]**
-- **[Reserving_cars]**
+- Adding cars to the application
+- Deleting cars from the application
+- Reserving ars
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -129,8 +129,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[full_authentication]**
-- [ ] **[authorization]**
+- Full authentication
+- Authorization
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -152,6 +152,6 @@ If you like this project, leave a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> This project was built and developed around the UI idea of ![Murat Korkmaz](https://www.behance.net/muratk) on ![Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
+> This project was built and developed around the UI idea of [Murat Korkmaz](https://www.behance.net/muratk) on [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
