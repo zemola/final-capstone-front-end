@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import styles from './Shop.module.css';
+import styles from './Reserve.module.css';
 
 const Reserve = () => {
   const { cars } = useSelector((state) => state.cars);
@@ -18,27 +18,26 @@ const Reserve = () => {
     <div className={styles.container}>
       <h1 className={styles.heading}>Select your car and schedule a date</h1>
       <div className={styles.inputContainer}>
-        <label htmlFor="car">
-          Select your car:
-          <br />
+        <label className={styles.label} htmlFor="car">
+          <p className={styles.labelText}>
+            Select your car:
+          </p>
           <select value={reservedCarId} onChange={(e) => setReservedCarId(e.target.value)} id="car">
             {options}
           </select>
-          <label htmlFor="userId">
-            User ID:
-            <br />
-            <input id="userId" type="text" disabled value={userRID} onChange={(e) => setUserRId(e.target.value)} />
-          </label>
-          <label htmlFor="startingDate">
-            Starting Date:
-            <br />
-            <input id="startingDate" type="date" value={reservedFrom} onChange={(e) => setReservedFrom(e.target.value)} />
-          </label>
-          <label htmlFor="startingDate">
-            Ending Date:
-            <br />
-            <input id="endingDate" type="date" value={reservedUntil} onChange={(e) => setReservedUntil(e.target.value)} />
-          </label>
+        </label>
+
+        <label className={styles.label} htmlFor="userId">
+          <p className={styles.labelText}>User ID:</p>
+          <input id="userId" type="text" disabled value={userRID} onChange={(e) => setUserRId(e.target.value)} />
+        </label>
+        <label className={styles.label} htmlFor="startingDate">
+          <p className={styles.labelText}>Starting Date:</p>
+          <input id="startingDate" type="date" value={reservedFrom} onChange={(e) => setReservedFrom(e.target.value)} />
+        </label>
+        <label className={styles.label} htmlFor="startingDate">
+          <p className={styles.labelText}>Ending Date:</p>
+          <input id="endingDate" type="date" value={reservedUntil} onChange={(e) => setReservedUntil(e.target.value)} />
         </label>
       </div>
     </div>
