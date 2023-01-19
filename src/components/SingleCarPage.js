@@ -20,59 +20,45 @@ export default function SingleCarPage() {
       <div className={styles.carImageContainer}>
         <img className={styles.carImage} src={carImage} alt="carImage" />
         <Link to="/" className={styles.pageBtnPrev}>
-          <p>
-            {'<'}
-          </p>
+          <p>{'<'}</p>
         </Link>
       </div>
       <div className={styles.carDetails}>
         <div className={styles.carNameContainer}>
-          <h3>
-            {car.brand}
-          </h3>
-          <p>
-            {car.model}
-          </p>
+          <h3>{car.brand}</h3>
+          <p>{car.model}</p>
         </div>
         <ul className={styles.infoChart}>
-          <li style={{ backgroundColor: '#e2e3e5' }} className={styles.infoChartItem}>
-            <p className={styles.infoChartText}>
-              Price
-            </p>
+          <li
+            style={{ backgroundColor: '#e2e3e5' }}
+            className={styles.infoChartItem}
+          >
+            <p className={styles.infoChartText}>Price</p>
             <p className={styles.infoChartText}>
               $
-              { car.price }
+              {car.price}
             </p>
           </li>
           <li className={styles.infoChartItem}>
-            <p className={styles.infoChartText}>
-              Year
-            </p>
-            <p className={styles.infoChartText}>
-              {car.release_year}
-            </p>
+            <p className={styles.infoChartText}>Year</p>
+            <p className={styles.infoChartText}>{car.release_year}</p>
           </li>
-          <li style={{ backgroundColor: '#e2e3e5' }} className={styles.infoChartItem}>
-            <p className={styles.infoChartText}>
-              Seats
-            </p>
-            <p className={styles.infoChartText}>
-              {car.seats}
-            </p>
+          <li
+            style={{ backgroundColor: '#e2e3e5' }}
+            className={styles.infoChartItem}
+          >
+            <p className={styles.infoChartText}>Seats</p>
+            <p className={styles.infoChartText}>{car.seats}</p>
           </li>
           <li className={styles.infoChartItem}>
-            <p className={styles.infoChartText}>
-              Wheels
-            </p>
-            <p className={styles.infoChartText}>
-              {car.wheel_drive}
-            </p>
+            <p className={styles.infoChartText}>Wheels</p>
+            <p className={styles.infoChartText}>{car.wheel_drive}</p>
           </li>
         </ul>
         <div className={styles.btnContainer}>
-          <button type="button" onClick={() => console.log('Reserve')} className={styles.btn}>
+          <Link to="/reserve" className={styles.btn}>
             Reserve
-          </button>
+          </Link>
         </div>
       </div>
     </div>
