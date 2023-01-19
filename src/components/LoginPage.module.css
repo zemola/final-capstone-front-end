@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 8;
+  height: 90vh;
+  gap: 50px;
+}
+
+.inputesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input {
+  padding: 5px;
+  background-color: white;
+  border: none;
+  border-bottom: solid 2px #96c01f;
+}
+
+.button {
+  padding: 5px 10px;
+  background-color: #96c01f;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.logoImg {
+  height: 10vh;
+  width: 10vh;
+}
+
+.heading {
+  text-align: center;
+}
