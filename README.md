@@ -1,4 +1,56 @@
-# Getting Started with Create React App and Redux
+<a name="readme-top"></a>
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
+
+# 📖 [RentoCars] <a name="about-project"></a>
+
+**[RentoCars]** is an application in which users can reserve cars  for their events for a given period of time.
+
+## 🛠 Built With <a name="built-with"></a>
+- Ruby on Rails
+- Postgresql
+- ReactJS
+- Redux
+- Webpack
+- Babel
+
+### Key Features <a name="key-features"></a>
+
+- Adding cars to the application
+- Deleting cars from the application
+- Reserving ars
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
@@ -44,3 +96,62 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Author1**
+
+- GitHub: [@githubhandle](https://github.com/zemola)
+- Twitter: [@twitterhandle](https://twitter.com/zemolat)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/olatunjiazeem/)
+
+👤 **Author2**
+
+- GitHub: [@githubhandle](https://github.com/HabibPayenda)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/habibpayenda/)
+
+👤 **Author3**
+
+- GitHub: [@githubhandle](https://github.com/Christianib003)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/christian-iradukunda/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU1aC1VrwSpaYboU5k2ciAQ%3D%3D)
+
+👤 **Author3**
+
+- GitHub: [@githubhandle](https://github.com/aceDavon)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/david-makoji-b6090971/)
+- LinkedIn: [LinkedIn](https://twitter.com/sharkleshevon)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- Full authentication
+- Authorization
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/zemola/final-capstone-front-end/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, leave a star.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> This project was built and developed around the UI idea of [Murat Korkmaz](https://www.behance.net/muratk) on [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
