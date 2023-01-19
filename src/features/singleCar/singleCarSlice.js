@@ -1,5 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
+const userId = JSON.parse(localStorage.getItem('userId'));
+
 const initialState = {
   car: [],
   status: 'idle',
@@ -7,7 +9,7 @@ const initialState = {
 
 export const fetchSingleCar = createAsyncThunk('singleCar/fetch', async (id) => {
   try {
-    const data = await fetch(`http://localhost:3000/api/v1/users/1/cars/${id}`);
+    const data = await fetch(`http://localhost:3000/api/v1/users/${userId}/cars/${id}`);
 
     const res = await data.json();
     if (res.error) {
