@@ -2,9 +2,6 @@
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -30,6 +27,12 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
+
+# 📖 [RentoCars] <a name="about-project"></a>
+
+**[RentoCars]** is an application in which users can reserve cars  for their events for a given period of time.
+
+
 
 # Getting Started with Create React App and Redux
 
