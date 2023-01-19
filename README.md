@@ -112,3 +112,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 - GitHub: [@githubhandle](https://github.com/Christianib003)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/christian-iradukunda/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BU1aC1VrwSpaYboU5k2ciAQ%3D%3D)
+
+👤 **Author3**
+
+- GitHub: [@githubhandle](https://github.com/aceDavon)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/david-makoji-b6090971/)
+- LinkedIn: [LinkedIn](https://twitter.com/sharkleshevon)
