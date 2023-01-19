@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 const initialState = {
   users: [],
   currentUser: null,
+  id: null,
   status: 'idle',
 };
 
@@ -19,6 +20,7 @@ export const fetchUser = createAsyncThunk('user/fetch', async () => {
 
 export const setCurrentUser = createAsyncThunk('set/currentUser', async (user) => {
   try {
+    localStorage.setItem('userId', JSON.stringify(user.id));
     return user;
   } catch (error) {
     return error.messages;
@@ -47,6 +49,7 @@ const UserSlice = createSlice({
       .addCase(setCurrentUser.fulfilled, (state, action) => ({
         ...state,
         currentUser: action.payload,
+        id: action.payload.id,
       }));
   },
 });
