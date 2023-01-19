@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
@@ -47,6 +48,8 @@
 - **[Reserving_cars]**
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
@@ -95,6 +98,8 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Author1**
@@ -120,7 +125,20 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - LinkedIn: [LinkedIn](https://twitter.com/sharkleshevon)
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[full_authentication]**
 - [ ] **[authorization]**
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/zemola/final-capstone-front-end/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
