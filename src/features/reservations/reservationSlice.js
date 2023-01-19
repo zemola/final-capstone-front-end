@@ -22,12 +22,21 @@ export const fetchReservatins = createAsyncThunk('reservations/fetch', async () 
   }
 });
 
-export const CreateReservation = createAsyncThunk('reservations/create', async (revData) => {
+export const CreateReservation = createAsyncThunk('reservations/create', async ({
+  reserved_from, reserved_until, car_id, user_id,
+}) => {
   try {
     const data = await fetch(`http://localhost:3000/api/v1/users/${id}/reservations`, {
       method: 'POST',
-      body: {
-        ...revData,
+      body: JSON.stringify({
+        reserved_from,
+        reserved_until,
+        user_id,
+        car_id,
+      }),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
       },
     });
 
@@ -35,7 +44,7 @@ export const CreateReservation = createAsyncThunk('reservations/create', async (
     if (res.error) {
       return [{ error: res.error }];
     }
-    return res.message;
+    return res;
   } catch (error) {
     return error.messages;
   }
@@ -62,7 +71,8 @@ const ReservationsSlice = createSlice({
       }))
       .addCase(CreateReservation.fulfilled, (state, { payload }) => ({
         ...state,
-        message: payload,
+        message: payload.message,
+        reservations: [...state.reservations, payload.data],
       }));
   },
 });

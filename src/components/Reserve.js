@@ -9,18 +9,22 @@ const Reserve = () => {
   const options = cars.map((car) => (
     <option id={car.id} key={car.id} value={car.id}>{car.brand}</option>
   ));
-
   const [reservedCarId, setReservedCarId] = useState('');
+
+  if (cars.length > 1 && reservedCarId === '') {
+    setReservedCarId(cars[0].id);
+  }
   const [userRID, setUserRId] = useState('');
   const [reservedFrom, setReservedFrom] = useState('');
   const [reservedUntil, setReservedUntil] = useState('');
 
   const dispatch = useDispatch();
+  const { message } = useSelector((state) => state.reservations);
 
   const data = {
     reserved_from: reservedFrom,
     reserved_until: reservedUntil,
-    user_id: 1,
+    user_id: userRID,
     car_id: reservedCarId,
   };
 
@@ -57,6 +61,7 @@ const Reserve = () => {
         <button className={styles.reserveBtn} type="button" onClick={() => dispatch(CreateReservation(data))}>
           Reserve
         </button>
+        {message}
       </div>
     </div>
   );
