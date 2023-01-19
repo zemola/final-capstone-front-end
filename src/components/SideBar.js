@@ -22,9 +22,9 @@ export default function SideBar() {
           <li className={styles.navItem}>
             <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
-              to="/lifestyle"
+              to="/reservations"
             >
-              <i className="fa-solid fa-car-side" />
+              <i className="fa-solid fa-chart-simple" />
             </NavLink>
           </li>
           <li className={styles.navItem}>
@@ -39,9 +39,9 @@ export default function SideBar() {
           <li className={styles.navItem}>
             <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
-              to="/drive"
+              to="/delete"
             >
-              <i className="fa-solid fa-car-side" />
+              <i className="fa-solid fa-trash" />
             </NavLink>
           </li>
         </ul>
@@ -57,9 +57,9 @@ export default function SideBar() {
           <li className={styles.navItem}>
             <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
-              to="/lifestyle"
+              to="/reservations"
             >
-              Life Style
+              Reservations
             </NavLink>
           </li>
           <li className={styles.navItem}>
@@ -74,9 +74,9 @@ export default function SideBar() {
           <li className={styles.navItem}>
             <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
-              to="/drive"
+              to="/delete"
             >
-              Test Drive
+              Delete
             </NavLink>
           </li>
         </ul>

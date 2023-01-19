@@ -2,8 +2,11 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   cars: [],
+  allCars: [],
   status: 'idle',
 };
+
+// const deleteCarAction = createAction('delete/car');
 
 export const fetchCar = createAsyncThunk('car/fetch', async (page) => {
   try {
@@ -14,6 +17,34 @@ export const fetchCar = createAsyncThunk('car/fetch', async (page) => {
       return [{ error: res.error }];
     }
     return res.data;
+  } catch (error) {
+    return error.messages;
+  }
+});
+
+export const fetchCars = createAsyncThunk('cars/fetch', async () => {
+  try {
+    const data = await fetch('http://localhost:3000/api/v1/cars');
+
+    const res = await data.json();
+    if (res.error) {
+      return [{ error: res.error }];
+    }
+    return res.data;
+  } catch (error) {
+    return error.messages;
+  }
+});
+
+export const deleteCar = createAsyncThunk('car/delete', async (id) => {
+  try {
+    const data = await fetch(`http://localhost:3000/api/v1/users/1/cars/${id}`, { method: 'DELETE' });
+
+    const res = await data.json();
+    if (res.error) {
+      return [{ error: res.error }];
+    }
+    return id;
   } catch (error) {
     return error.messages;
   }
@@ -37,6 +68,17 @@ const CarSlice = createSlice({
       .addCase(fetchCar.rejected, (state, { error }) => ({
         ...state,
         status: error,
+      }));
+    builder
+      .addCase(deleteCar.fulfilled, (state, { payload }) => ({
+        ...state,
+        cars: state.cars.filter((car) => car.id !== payload),
+        status: 'idle',
+      }))
+      .addCase(fetchCars.fulfilled, (state, { payload }) => ({
+        ...state,
+        allCars: payload,
+        status: 'idle',
       }));
   },
 });
