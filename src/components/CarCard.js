@@ -8,7 +8,7 @@ export default function CarCard({
 }) {
   return (
     <div className={styles.container}>
-      <img src={image_link} className={styles.carImg} alt={model} />
+      <img src={`${image_link}`} className={styles.carImg} alt={model} />
       <div className={styles.carDetails}>
         <h3 className={styles.brnadName}>{model}</h3>
         <p className={styles.dots}>.......................</p>
