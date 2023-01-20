@@ -56,6 +56,14 @@ export default function SideBar() {
           </li>
           <li className={styles.navItem}>
             <NavLink
+              to="/addcar"
+              className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
+            >
+              Add Car
+            </NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink
               className={({ isActive }) => (isActive ? styles.navLink : styles.navLinkTwo)}
               to="/reservations"
             >

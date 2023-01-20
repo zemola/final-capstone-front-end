@@ -9,7 +9,7 @@ export default function CarDeletePage() {
   const { allCars } = useSelector((state) => state.cars);
   React.useEffect(() => {
     dispatch(fetchCars());
-  }, [dispatch, allCars]);
+  }, [dispatch]);
 
   let list = null;
   if (allCars.length > 0) {

@@ -11,6 +11,7 @@ import CarDeletePage from './components/CarDeletePage';
 import MyReservationsPage from './components/MyReservationsPage';
 import SingleCarPage from './components/SingleCarPage';
 import Reserve from './components/Reserve';
+import AddCarPage from './components/AddCarPage';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -22,6 +23,7 @@ root.render(
         <Routes>
           <Route element={<App />}>
             <Route element={<HomePage />} index />
+            <Route element={<AddCarPage />} path="addcar" />
             <Route element={<SingleCarPage />} path="cars/:id" />
             <Route element={<MyReservationsPage />} path="reservations" />
             <Route element={<Reserve />} path="/reserve" />
