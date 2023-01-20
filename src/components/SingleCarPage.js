@@ -56,7 +56,7 @@ export default function SingleCarPage() {
           </li>
         </ul>
         <div className={styles.btnContainer}>
-          <Link to="/reserve" className={styles.btn}>
+          <Link to="/reserve" className={styles.btn} state={car.id}>
             Reserve
           </Link>
         </div>
