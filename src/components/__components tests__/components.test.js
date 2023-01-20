@@ -7,6 +7,7 @@ import App from "../../App";
 import HomePage from "../HomePage";
 import SingleCarPage from "../SingleCarPage";
 import MyReservationsPage from "../MyReservationsPage";
+import CarDeletePage from "../CarDeletePage";
 
 describe("Test all app Components", () => {
   it("Test the app landing Page", () => {
@@ -58,5 +59,22 @@ describe("Test all app Components", () => {
       </React.StrictMode>
     );
     expect(reserve).toMatchSnapshot();
+  });
+
+  it("Test the app Delete car Page", () => {
+    const Delete = render(
+      <React.StrictMode>
+        <Provider store={store}>
+          <BrowserRouter>
+            <Routes>
+              <Route element={<App />}>
+                <Route element={<CarDeletePage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </Provider>
+      </React.StrictMode>
+    );
+    expect(Delete).toMatchSnapshot();
   });
 });
