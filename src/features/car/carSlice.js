@@ -6,6 +6,7 @@ const initialState = {
   cars: [],
   allCars: [],
   status: 'idle',
+  carDeleteMsg: '',
 };
 
 // const deleteCarAction = createAction('delete/car');
@@ -38,9 +39,9 @@ export const fetchCars = createAsyncThunk('cars/fetch', async () => {
   }
 });
 
-export const deleteCar = createAsyncThunk('car/delete', async () => {
+export const deleteCar = createAsyncThunk('car/delete', async (carId) => {
   try {
-    const data = await fetch(`http://localhost:3000/api/v1/users/${id}/cars/${id}`, { method: 'DELETE' });
+    const data = await fetch(`http://localhost:3000/api/v1/users/${id}/cars/${carId}`, { method: 'DELETE' });
 
     const res = await data.json();
     if (res.error) {
@@ -74,13 +75,15 @@ const CarSlice = createSlice({
     builder
       .addCase(deleteCar.fulfilled, (state, { payload }) => ({
         ...state,
-        cars: state.cars.filter((car) => car.id !== payload),
-        status: 'idle',
+        allCars: state.allCars.filter((car) => car.id * 1 !== payload),
+        status: 'deleted',
+        carDeleteMsg: '.',
       }))
       .addCase(fetchCars.fulfilled, (state, { payload }) => ({
         ...state,
         allCars: payload,
         status: 'idle',
+        carDeleteMsg: '',
       }));
   },
 });
