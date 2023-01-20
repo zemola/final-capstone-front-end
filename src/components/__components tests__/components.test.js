@@ -1,16 +1,16 @@
-import React from "react";
-import { Provider } from "react-redux";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { render } from "@testing-library/react";
-import store from "../../app/store";
-import App from "../../App";
-import HomePage from "../HomePage";
-import SingleCarPage from "../SingleCarPage";
-import MyReservationsPage from "../MyReservationsPage";
-import CarDeletePage from "../CarDeletePage";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { render } from '@testing-library/react';
+import store from '../../app/store';
+import App from '../../App';
+import HomePage from '../HomePage';
+import SingleCarPage from '../SingleCarPage';
+import MyReservationsPage from '../MyReservationsPage';
+import CarDeletePage from '../CarDeletePage';
 
-describe("Test all app Components", () => {
-  it("Test the app landing Page", () => {
+describe('Test all app Components', () => {
+  it('Test the app landing Page', () => {
     const home = render(
       <React.StrictMode>
         <Provider store={store}>
@@ -22,12 +22,12 @@ describe("Test all app Components", () => {
             </Routes>
           </BrowserRouter>
         </Provider>
-      </React.StrictMode>
+      </React.StrictMode>,
     );
     expect(home).toMatchSnapshot();
   });
 
-  it("Test the app Single car Page", () => {
+  it('Test the app Single car Page', () => {
     const carDetails = render(
       <React.StrictMode>
         <Provider store={store}>
@@ -39,12 +39,12 @@ describe("Test all app Components", () => {
             </Routes>
           </BrowserRouter>
         </Provider>
-      </React.StrictMode>
+      </React.StrictMode>,
     );
     expect(carDetails).toMatchSnapshot();
   });
 
-  it("Test the app Reserve car Page", () => {
+  it('Test the app Reserve car Page', () => {
     const reserve = render(
       <React.StrictMode>
         <Provider store={store}>
@@ -56,12 +56,12 @@ describe("Test all app Components", () => {
             </Routes>
           </BrowserRouter>
         </Provider>
-      </React.StrictMode>
+      </React.StrictMode>,
     );
     expect(reserve).toMatchSnapshot();
   });
 
-  it("Test the app Delete car Page", () => {
+  it('Test the app Delete car Page', () => {
     const Delete = render(
       <React.StrictMode>
         <Provider store={store}>
@@ -73,7 +73,7 @@ describe("Test all app Components", () => {
             </Routes>
           </BrowserRouter>
         </Provider>
-      </React.StrictMode>
+      </React.StrictMode>,
     );
     expect(Delete).toMatchSnapshot();
   });
