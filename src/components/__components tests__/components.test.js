@@ -5,6 +5,7 @@ import { render } from "@testing-library/react";
 import store from "../../app/store";
 import App from "../../App";
 import HomePage from "../HomePage";
+import SingleCarPage from "../SingleCarPage";
 
 describe('Test all app Components', () => {
   it('Test the app landing Page', () => {
@@ -23,4 +24,20 @@ describe('Test all app Components', () => {
     );
     expect(home).toMatchSnapshot();
   })
+  it("Test the app Single car Page", () => {
+    const carDetails = render(
+      <React.StrictMode>
+        <Provider store={store}>
+          <BrowserRouter>
+            <Routes>
+              <Route element={<App />}>
+                <Route element={<SingleCarPage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </Provider>
+      </React.StrictMode>
+    );
+    expect(carDetails).toMatchSnapshot();
+  });
 })
