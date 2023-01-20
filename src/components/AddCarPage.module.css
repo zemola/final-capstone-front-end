@@ -8,5 +8,25 @@
 }
 
 .inputsContianer {
-  
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  gap: 10px;
+}
+
+.input {
+  padding: 5px;
+  background-color: white;
+  border: none;
+  border-bottom: solid 2px #96c01f;
+}
+
+.button {
+  padding: 5px 10px;
+  background-color: #96c01f;
+  border-radius: 5px;
+  border: none;
+  color: white;
 }

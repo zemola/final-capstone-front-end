@@ -25,6 +25,7 @@ const HomePage = () => {
             price={item.price}
             brand={item.brand}
             model={item.model}
+            image={item.image_link}
           />
         </Link>
       ));

@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './CarCard.module.css';
-import carImg from '../img/car.png';
+// import carImg from '../img/car.png';
 
-// eslint-disable-next-line react/prop-types
-export default function CarCard({ price, brand, model }) {
+export default function CarCard({
+  // eslint-disable-next-line react/prop-types
+  price, brand, model, image_link,
+}) {
   return (
     <div className={styles.container}>
-      <img src={carImg} className={styles.carImg} alt={model} />
+      <img src={image_link} className={styles.carImg} alt={model} />
       <div className={styles.carDetails}>
         <h3 className={styles.brnadName}>{model}</h3>
         <p className={styles.dots}>.......................</p>
