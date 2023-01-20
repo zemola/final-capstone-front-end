@@ -6,9 +6,10 @@ import store from "../../app/store";
 import App from "../../App";
 import HomePage from "../HomePage";
 import SingleCarPage from "../SingleCarPage";
+import MyReservationsPage from "../MyReservationsPage";
 
-describe('Test all app Components', () => {
-  it('Test the app landing Page', () => {
+describe("Test all app Components", () => {
+  it("Test the app landing Page", () => {
     const home = render(
       <React.StrictMode>
         <Provider store={store}>
@@ -23,7 +24,8 @@ describe('Test all app Components', () => {
       </React.StrictMode>
     );
     expect(home).toMatchSnapshot();
-  })
+  });
+
   it("Test the app Single car Page", () => {
     const carDetails = render(
       <React.StrictMode>
@@ -40,4 +42,21 @@ describe('Test all app Components', () => {
     );
     expect(carDetails).toMatchSnapshot();
   });
-})
+
+  it("Test the app Reserve car Page", () => {
+    const reserve = render(
+      <React.StrictMode>
+        <Provider store={store}>
+          <BrowserRouter>
+            <Routes>
+              <Route element={<App />}>
+                <Route element={<MyReservationsPage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </Provider>
+      </React.StrictMode>
+    );
+    expect(reserve).toMatchSnapshot();
+  });
+});
