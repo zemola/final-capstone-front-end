@@ -7,6 +7,7 @@ const initialState = {
   allCars: [],
   status: 'idle',
   carDeleteMsg: '',
+  carCreateMsg: '',
 };
 
 // const deleteCarAction = createAction('delete/car');
@@ -53,6 +54,40 @@ export const deleteCar = createAsyncThunk('car/delete', async (carId) => {
   }
 });
 
+export const createCar = createAsyncThunk('car/create', async ({
+  brand, model, release_year, color, transmission, seats, wheelDrive, price, image, user_id,
+}) => {
+  try {
+    const data = await fetch(`http://localhost:3000/api/v1/users/${id}/cars`, {
+      method: 'POST',
+      body: JSON.stringify({
+        brand,
+        model,
+        color,
+        release_year,
+        transmission,
+        seats,
+        wheel_drive: wheelDrive,
+        price,
+        image_link: image,
+        user_id,
+      }),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
+    const res = await data.json();
+    if (res.error) {
+      return [{ error: res.error }];
+    }
+    return res.message;
+  } catch (error) {
+    console.log(error);
+    return error.messages;
+  }
+});
+
 const CarSlice = createSlice({
   name: 'cars',
   initialState,
@@ -84,6 +119,10 @@ const CarSlice = createSlice({
         allCars: payload,
         status: 'idle',
         carDeleteMsg: '',
+      }))
+      .addCase(createCar.fulfilled, (state, { payload }) => ({
+        ...state,
+        carCreateMsg: payload,
       }));
   },
 });

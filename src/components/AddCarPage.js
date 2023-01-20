@@ -11,6 +11,7 @@ export default function AddCarPage() {
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState(0);
   const [user_id, set_user_id] = useState(0);
+  const [release_year, setReleaseYear] = useState('');
 
   const id = JSON.parse(localStorage.getItem('userId'));
 
@@ -34,6 +35,10 @@ export default function AddCarPage() {
         <input type="text" value={wheelDrive} onChange={(e) => setWheelDrive(e.target.value)} placeholder="Enter Car Wheel Drive" />
         <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Enter Car Price" />
         <input type="text" value={image} onChange={(e) => setImage(e.target.value)} placeholder="Enter Car Image Url" />
+        <label htmlFor="year">
+          Select Car Release Year:
+          <input id="year" type="date" value={release_year} onChange={(e) => setReleaseYear(e.target.value)} />
+        </label>
       </div>
     </div>
   );
